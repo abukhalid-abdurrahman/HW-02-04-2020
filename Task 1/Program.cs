@@ -9,7 +9,13 @@ namespace Task_1
 {
     class Rectangle
     {
-
+        private double side1;
+        private double side2;
+        public Rectangle(double _side1, double _side2)
+        {
+            this.side1 = _side1;
+            this.side2 = _side2;
+        }
     }
     class Program
     {
