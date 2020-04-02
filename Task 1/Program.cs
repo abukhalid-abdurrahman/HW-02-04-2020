@@ -43,7 +43,12 @@ namespace Task_1
     {
         static void Main(string[] args)
         {
+            double A = double.Parse(Console.ReadLine().Replace(".", ","));
+            double B = double.Parse(Console.ReadLine().Replace(".", ","));
 
+            Rectangle rect = new Rectangle(A, B);
+            Console.WriteLine("AREA: " + rect.Area);
+            Console.WriteLine("PERIMETER: " + rect.Perimeter);
         }
     }
 }
