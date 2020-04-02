@@ -17,6 +17,9 @@ namespace Task_2
             
             public Book(string _title, string _author, string _content)
             {
+                _bookTitle = new Title();
+                _bookAuthor = new Author();
+                _bookContent = new Content();
                 _bookTitle.titleStr = _title;
                 _bookAuthor.authorStr = _author;
                 _bookContent.сontentStr = _content;
@@ -52,7 +55,7 @@ namespace Task_2
             {
                 Console.BackgroundColor = ConsoleColor.White;
                 Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine("Title: " + titleStr);
+                Console.WriteLine("Title: " + this.titleStr);
             }
         }
 
@@ -63,7 +66,7 @@ namespace Task_2
             {
                 Console.BackgroundColor = ConsoleColor.White;
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Author: " + authorStr);
+                Console.WriteLine("Author: " + this.authorStr);
             }
         }
 
@@ -74,12 +77,20 @@ namespace Task_2
             {
                 Console.BackgroundColor = ConsoleColor.Yellow;
                 Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("Content: " + сontentStr);
+                Console.WriteLine("Content: " + this.сontentStr);
             }
         }
         static void Main(string[] args)
         {
-            
+            Console.Write("Input Author: ");
+            string author = Console.ReadLine();
+            Console.Write("Input Title: ");
+            string title = Console.ReadLine();
+            Console.Write("Input Content: ");
+            string content = Console.ReadLine();
+
+            Book book = new Book(title, author, content);
+            book.ShowInfo();
         }
     }
 }
