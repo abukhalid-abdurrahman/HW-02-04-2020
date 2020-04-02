@@ -23,9 +23,7 @@ namespace Task_3
         public void Sleep()
         {
             if(isSleepAtNight)
-            {
                 Console.WriteLine("Хммммм??? Скорей всего меня уволили! Только так могу поспать!");
-            }
             else
                 Console.WriteLine("Через час дэдлайн! Я должен сдать проект!");
         }
@@ -48,7 +46,12 @@ namespace Task_3
     {
         static void Main(string[] args)
         {
-            
+            Programmer prog = new Programmer("Faridun", 17);
+            prog.ShowInfo();
+            prog.Walk();
+            prog.Stay();
+            prog.Doing();
+            prog.Sleep();
         }
     }
 }
